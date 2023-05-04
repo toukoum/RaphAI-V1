@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--    Pour faciliter l'envoi de requêtes Ajax, on importe jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Mon bo Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style-appQuestion.css' %}">
+    <script src="{% static 'js/app.js' %}"></script>
+
+</head>
+
+<body>
+
+{% csrf_token %}
+<header>
+    <div class="logo">
+        <p>TOUKOUM</p>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sport</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="up-part">
+
+        <video class="up-left" id="video-avatar" width="200" height="200">
+            <source id="avatar-video" src="{% static 'videos/true_blabla.mp4' %}" type="video/mp4">
+        </video>
+
+        <div class="up-right">
+            <div class="answer-box">
+                <p>RaphA.I. :</p>
+                <p id="answer-text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="down-part">
+        <form id="question-form" >
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputField" placeholder="Talk with Raphael..." required oninvalid="this.setCustomValidity('Please fill out this field.')" oninput="this.setCustomValidity('')">
+              <button class="btn" type="submit">
+                <img src="{% static 'images/sent-icon.png' %}" alt="Submit icon">
+              </button>
+            </div>
+        </form>
+
+        <div class="under-text">
+            <p>Free Research Preview. RaphA.I. may produce inaccurate information about Raphael. V0.1. <a id="how-link" href="#">How it's work ?</a></p>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>

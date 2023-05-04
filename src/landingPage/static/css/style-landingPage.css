@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=League+Spartan:wght@700&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+/*
+font-family: 'Arimo', sans-serif;
+font-family: 'League Spartan', sans-serif;
+font-family: 'Sanchez', serif;
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+  font-family: 'Arimo', sans-serif;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 7%;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: -20px;
+
+}
+
+nav li {
+  margin-right: 80px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.left-content {
+  width: 50%;
+  height: 93%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-content {
+  width: 50%;
+  height: 93%;
+  float: right;
+}
+
+.up-right{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.down-right{
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+}
+
+
+.centered-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-27%, -50%);
+}
+
+.centered-image img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.logo{
+  color: white;
+  font-weight: bold;
+}
+
+
+.main-text {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 10.5vw;
+  margin-top: -170px;
+  letter-spacing: -1.1vw;
+  margin-left: 70px;
+
+}
+
+.raph-name{
+  font-size: 2.8vw;
+  font-family: 'sanchez', sans-serif;
+  font-weight: lighter;
+  word-spacing: 20px;
+  margin-left: 80px;
+
+
+}
+
+#under-text{
+  margin-top: -3vw;
+}
+
+.bouton-main{
+  z-index: 1000;
+  font-size: 1.8vw;
+  font-family: 'Arimo', sans-serif;
+  text-decoration: none;
+}
+
+
+#text-quote{
+  font-size: 2.5vw;
+  font-family: 'Crimson Text', serif;
+  text-align: end;
+  margin-right: 11vw;
+  margin-bottom: 6vw;
+  color: black;
+}
+
+#arrow-white{
+  display: none;
+}
+
+.wrapper-button img {
+  height: 1.2vw;
+  rotate: 225deg;
+  margin-bottom: -0.1vw;
+  margin-left: 0.3vw;
+
+}
+.wrapper-button{
+  z-index: 100;
+  border: solid 2px #1E201D;
+  border-radius: 50px;
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 9vw;
+  color: #1E201D;
+}
+
+.wrapper-button:hover{
+  background-color: #1E201D;
+  transition: .3s ease-out ;
+  color: white;
+}

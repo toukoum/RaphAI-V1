@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home page</title>
+        <link rel="stylesheet" href="{% static 'css/style-landingPage.css' %}">
+
+    </head>
+    <body>
+    <header>
+        <div class="logo">
+            <p>TOUKOUM</p>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sport</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="left-content">
+        <div class="main-text">
+            <h2>PORT</h2>
+            <h2 id="under-text">FOLIO</h2>
+        </div>
+        <h3 class="raph-name">RAPHAEL GIRAUD</h3>
+    </div>
+    <div class="right-content">
+        <div class="up-right">
+            <a  href="{% url 'appQuestion' %}" class="bouton-main">
+                <div class="wrapper-button">
+                    <p>Talk with Raphael</p>
+                    <img id="arrow-black" src="{% static 'images/arrow.png' %}" alt="black arrow icon">
+                    <img id="arrow-white" src="{% static 'images/arrow-white.png' %}" alt="white arrow icon">
+                </div>
+            </a>
+        </div>
+        <div class="down-right">
+            <p id="text-quote">An Interactive Portfolio with  <br>AI Integration</p>
+        </div>
+    </div>
+
+    <div class="centered-image">
+        <img src="{% static 'images/screen.png' %}" alt="Ma grosse gueule en memojis">
+    </div>
+    </body>
+</html>
