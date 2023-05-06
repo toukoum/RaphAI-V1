@@ -140,13 +140,23 @@ nav a {
   display: none;
 }
 
+.bouton-main:hover #arrow-black {
+  display: none;
+}
+
+.bouton-main:hover #arrow-white {
+  display: inline-block;
+
+}
+
 .wrapper-button img {
   height: 1.2vw;
   rotate: 225deg;
   margin-bottom: -0.1vw;
   margin-left: 0.3vw;
-
 }
+
+
 .wrapper-button{
   z-index: 100;
   border: solid 2px #1E201D;
@@ -156,10 +166,13 @@ nav a {
   align-items: center;
   margin-left: 9vw;
   color: #1E201D;
+  box-shadow: 0px 5px 5px #282828;
 }
 
 .wrapper-button:hover{
-  background-color: #1E201D;
+  background-color: black;
   transition: .3s ease-out ;
   color: white;
+  transform: translate(0px, 2px);
+  box-shadow: none;
 }
