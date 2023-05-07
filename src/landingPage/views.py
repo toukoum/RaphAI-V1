@@ -29,7 +29,7 @@ def get_answer(request):
 
         llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature": 0.8, "max_length": 512})
 
-        loader = TextLoader('/home/toukoum/portfolio/src/context.txt')
+        loader = TextLoader('../context.txt')
         documents = loader.load()
 
         # Text Splitter
