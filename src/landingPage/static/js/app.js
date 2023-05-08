@@ -20,13 +20,23 @@ window.addEventListener('load', function() {
         // Récupérer la valeur de l'input question
         const questionInput = document.getElementById("inputField");
         const question = questionInput.value;
-
+        questionInput.value = "";
         // Afficher la question dans la console
         console.log("Question posée : ", question);
 
 
+        // Ajouter les points de chargement
+        const loadingDots = document.createElement('div');
+        loadingDots.innerHTML = '<p class="loading-dots">.</p>';
+
+        const lastAnswerBoxDiv = document.querySelector('.answer-box:last-child');
+        lastAnswerBoxDiv.appendChild(loadingDots);
+
+
+
+
         $.ajax({
-            url: '/landingPage/get_answer/',
+            url: '/get_answer/',
             type: 'POST',
             data: {
                 question: question,
@@ -41,6 +51,8 @@ window.addEventListener('load', function() {
                 let i = 0;
                 video.play();
 
+
+                loadingDots.remove();
                 const interval = setInterval(() => {
                     // document.getElementById("answer-text").textContent += mots[i] + " ";
                     // const answerBoxDivs = document.querySelectorAll('.answer-box');
@@ -50,6 +62,7 @@ window.addEventListener('load', function() {
 
                     const lastAnswerBoxDiv = document.querySelector('.answer-box:last-child');
                     const lastParagraph = lastAnswerBoxDiv.children[lastAnswerBoxDiv.children.length - 1];
+                    lastParagraph.value = ""
                     lastParagraph.textContent += " " + mots[i] + " ";
 
 
@@ -59,6 +72,8 @@ window.addEventListener('load', function() {
                         clearInterval(interval);
                         video.pause();
                         video.currentTime = 0; // Remet la vidéo à zéro
+
+
 
                         // Ajouter les nouveaux paragraphes à la div .answer-box
                         // Générer un identifiant unique
@@ -80,7 +95,9 @@ window.addEventListener('load', function() {
                     if (i < mots.length) {
                         video.loop = true;
                         video.currentTime = 0;
+
                         video.play();
+
                     }
                 });
 

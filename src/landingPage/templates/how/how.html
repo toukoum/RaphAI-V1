@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>how</title>
+    <link rel="stylesheet" href="{% static 'css/style-header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style-how.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="{% url 'homePage' %}">TOUKOUM</a><p>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sport</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <div class="content">
+
+<!--             Utilisation d'une requête ajax pour envoyer la question a une vue /get_answer.-->
+<!--Chargement d'un modèle Hugging Face (Google Flan-t5-xxl) à l'aide de la classe HuggingFaceHub. => -->
+<!--Chargement d'un fichier contenant des documents pertinents (context.txt) à l'aide de la classe TextLoader.-->
+<!--Division des documents en morceaux plus petits à l'aide de la classe CharacterTextSplitter.-->
+<!--Conversion du texte en vecteurs à l'aide de la classe HuggingFaceEmbeddings.-->
+<!--Stockage des vecteurs de chaque document dans une base de données FAISS.-->
+<!--Recherche de similarité dans la base de données pour trouver les documents les plus pertinents en fonction de la question de l'utilisateur.-->
+<!--Construction d'un modèle de chaîne de langage naturel (LLM) à l'aide de LLMChain, qui utilise le modèle Hugging Face et une chaîne de texte prédéfinie (le "prompt") pour générer une réponse à la question de l'utilisateur.-->
+<!--Renvoi de la réponse en format JSON pour être affichée à l'utilisateur.-->
+         <h2>This is a short Description about my Experiment with LangChain, LLM Open Source Model and Hugging Face</h2>
+         <ul>
+             <li>Using an ajax request to send the question to the /get_answer view.</li>
+             <li>Loading of a Hugging Face model (Google Flan-t5-xxl) using the HuggingFaceHub class. => OPEN SOURCE !</li>
+             <li>Loading of a file containing relevant informations about my life (context.txt) -> contain the main informations of my life for the moment</li>
+             <li>Splitting of the documents into small chunks using the CharacterTextSplitter class.</li>
+             <li>Conversion of text into vectors using the HuggingFaceEmbeddings class. OPEN SOURCE</li>
+             <li>Storage of the vectors of each document in a FAISS database. Like Pinecone</li>
+             <li>Similarity search in the database to find the most relevant documents based on the user's question. <br>
+                 So if you ask "What's you favourite meal ?", the similarity search into the vector database of embedding will
+                 return for example "Favourite meal : pasta and lasagna"</li>
+             <li>Construction of a natural language chain model (LLM) using LLMChain, which uses the Hugging Face model
+                 and a pre-defined text chain (the "prompt") to generate a response to the user's question.
+             </li>
+             <li>Return of the response in JSON format to be displayed to the user.</li>
+         </ul>
+
+         <div class="image"><img src="{% static 'images/langchainwork.png' %}" alt="shema of langchain"></div>
+
+
+         <h2>Issues</h2>
+
+         <ul>
+             <li>Not possible on the free version of Pythonanywhere hosting service to install PyTorch (not enough space), so I just provide in the prompt template the most important information about me...</li>
+             <li>Result of the answers of Hugging Face model is not very good compared to OpenAI's which are too expensive...</li>
+         </ul>
+
+         <p id="credit"> @Raphael_Giraud</p>
+     </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

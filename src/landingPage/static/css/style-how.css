@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=League+Spartan:wght@700&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Espace entre le header et le contenu */
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.content ul{
+  margin-top: 2vw;
+  width: 60%;
+}
+
+.content ul li {
+  font-family: 'Arimo', sans-serif;
+  margin-top: 1vw;
+
+}
+
+.content h2{
+  text-align: center;
+  animation: flow 5s ease-in-out infinite;
+  background: linear-gradient(-60deg, #12c2e9, #c471ed, #f64f59) ;
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 40%;
+}
+@keyframes flow {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+
+}
+
+
+.image{
+  margin-top: 5vw;
+  width: 35%;
+  margin-bottom: 5vw;
+}
+.image img{
+  width: 100%;
+
+}
+
+#credit{
+  margin: 10vw 0  0 0 ;
+  font-style: italic;
+}
+
+footer{
+  height: 2vw;
+}
+

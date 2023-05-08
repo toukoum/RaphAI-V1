@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <title>Mon bo Portfolio</title>
     <link rel="stylesheet" href="{% static 'css/style-appQuestion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style-header.css' %}">
     <script src="{% static 'js/app.js' %}"></script>
 
 </head>
@@ -17,7 +18,7 @@
 {% csrf_token %}
 <header>
     <div class="logo">
-        <p>TOUKOUM</p>
+        <a href="{% url 'homePage' %}">TOUKOUM</a><p>
     </div>
     <div>
         <nav>
@@ -43,6 +44,8 @@
                 <div class="answer-box">
                     <p class="name-ia">RaphA.I. :</p>
                     <p id="answer-text"></p>
+<!--                    <p id="answer-text"><div class="loading-dots">.</div></p>-->
+
                 </div>
             </div>
         </div>
@@ -58,7 +61,7 @@
         </form>
 
         <div class="under-text">
-            <p>Free Research Preview. RaphA.I. may produce inaccurate information about Raphael. V0.1. <a id="how-link" href="#">How it's work ?</a></p>
+            <p>Free Research Preview. RaphA.I. may produce inaccurate information about Raphael. V0.1. <a id="how-link" href="{% url 'how' %}">How it's work ?</a></p>
         </div>
     </div>
 </main>
