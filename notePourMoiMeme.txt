@@ -1,0 +1,70 @@
+-> Site web de base html + css : ok
+-> Form d'input pour que l'user écrive à mon avatar une question : ok
+-> interception de l'input et envoi via requête ajax a la vue Django : 
+-> 
+
+
+
+PROCESS :
+
+On peut utiliser JS pour traiter l'input de l'user, mais connaît rien, du coup je vais use Django (car plutôt familier avec python)
+
+
+
+Récap des interactions qui vont avoir lieu entre l'input de l'utilisateur, le javascript et la vue Django :
+
+
+1- L'utilisateur entre une question dans le formulaire et soumet le formulaire en cliquant sur le bouton "envoyer".
+
+2- Le JavaScript intercepte l'événement de soumission du formulaire et envoie une requête AJAX à la vue Django en utilisant les données du formulaire 
+comme paramètres.
+
+3- La vue Django reçoit la requête AJAX et récupère les données envoyées (la question de l'utilisateur).
+
+4- La vue Django envoie une requête à l'API de Hugging Face en utilisant la clé API appropriée pour récupérer la réponse à la question.
+
+5- L'API de Hugging Face renvoie la réponse à la vue Django.
+
+6- La vue Django renvoie la réponse à la requête AJAX.
+
+7- Le JavaScript reçoit la réponse de la requête AJAX et affiche la réponse de l'API de Hugging Face dans l'élément HTML approprié 
+( par exemple, en utilisant la méthode jQuery text()).
+
+
+WHAT I LEARN : 
+
+DJANGO : 
+    framework Web open source Python. 
+    Il fournit une structure pour le développement de sites Web, en réduisant le temps et l'effort nécessaires pour créer
+    des applications Web complexes.
+
+    Django suit le modèle de conception Modèle-Vue-Contrôleur (MVC), où le modèle gère la logique des données.
+    VUE =>  gère l'interface utilisateur
+    CONTROLEUR => gère les interactions entre les deux (interface et données). 
+    Cela aide à séparer les préoccupations et à maintenir une structure claire dans votre code.
+
+    Fonctionnalité :
+    - l'authentification des utilisateurs
+    - la gestion des sessions
+    - la validation des formulaires
+    - la gestion de l'administration du site
+
+REQUETE AJAX :
+
+    les requêtes AJAX permettent de charger des données à partir d'un serveur de manière asynchrone et sans avoir à recharger la page entière,
+    ce qui améliore l'expérience utilisateur et rend les applications Web plus rapides et plus réactives.
+
+
+jQuery :
+    jQuery est une bibliothèque JavaScript populaire qui facilite la manipulation des éléments HTML, la gestion des événements,
+    l'animation et l'envoi de requêtes Ajax.
+    jQuery simplifie le processus d'envoi de requêtes Ajax en fournissant une méthode
+    simple pour le faire.
+    La méthode $.ajax() est utilisée pour envoyer des requêtes Ajax à un serveur.
+
+
+JSON :
+    Le JSON est un format de données simple, lisible et largement utilisé pour l'échange de données entre
+    les applications et les serveurs web.
+    Le format JSON est composé de paires clé/valeur, où les clés sont des chaînes de caractères et les valeurs peuvent
+    être de plusieurs types différents, tels que des chaînes de caractères, des nombres, des tableaux ou des objets.

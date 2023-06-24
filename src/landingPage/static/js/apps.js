@@ -67,7 +67,7 @@ window.addEventListener('load', function() {
 
     $("#answer-text").text("");
 
-    var csrf = $("input[name=csrfmiddlewaretoken]").val();
+    // var csrf = $("input[name=csrfmiddlewaretoken]").val();
 
     // Récupérez le form
     const questionForm = document.getElementById("question-form");
@@ -118,11 +118,7 @@ window.addEventListener('load', function() {
 
                 loadingDots.remove();
                 const interval = setInterval(() => {
-                    // document.getElementById("answer-text").textContent += mots[i] + " ";
-                    // const answerBoxDivs = document.querySelectorAll('.answer-box');
-                    // const lastAnswerBoxDiv = answerBoxDivs[answerBoxDivs.length - 1];
-                    // const lastParagraph = lastAnswerBoxDiv.querySelector('p:last-of-type');
-                    // lastParagraph.textContent += " " + mots[i] + " ";
+            
 
                     const lastAnswerBoxDiv = document.querySelector('.answer-box:last-child');
                     const lastParagraph = lastAnswerBoxDiv.children[lastAnswerBoxDiv.children.length - 1];
